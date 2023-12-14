@@ -1,0 +1,141 @@
+/*---------------------------------------------------------------------------------
+
+ Theme Name:   Figure It Out
+ Theme URI:    https://github.com/kylemichaelsullivan/figure-it-out
+ Description:  A basic Child Theme for Divi
+ Author:       Kyle Michael Sullivan
+ Author URI:   https://github.com/kylemichaelsullivan/
+ Template:     Divi
+ Version:      1.0.0
+ Text Domain:  FigureItOut
+ License:      GNU General Public License v3 or later
+ License URI:  https://www.gnu.org/licenses/gpl-3.0.html
+
+-----------------------------------------------------------------------------------*/
+
+/** FIO CHILD THEME CUSTOM STYLES HERE **/
+
+#main-content {
+	position: relative;
+}
+
+#main-content::before {
+	position: absolute;
+	content: '';
+	background-color: #ffffff01;
+	-webkit-filter: blur(0.5rem);
+	filter: blur(0.5rem);
+	-webkit-backdrop-filter: blur(0.5rem);
+	backdrop-filter: blur(0.5rem);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.25s linear;
+}
+
+#main-content.fio-open::before {
+	opacity: 0.75;
+	z-index: 99;
+}
+
+#figure-it-out {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 99999;
+}
+
+#figure-it-out form {
+	background-color: #dddddd;
+	min-width: min(20rem, 95vw);
+	max-width: 95vw;
+	padding: 1rem;
+}
+
+/* Hide LastPass icon */
+#figure-it-out form div[data-lastpass-icon-root='true'] {
+	display: none;
+}
+
+#figure-it-out form a:hover,
+#figure-it-out form a:focus {
+	text-decoration: underline;
+}
+
+#figure-it-out form input {
+	font-size: 1em;
+	padding: 0.5em 1em;
+}
+
+#figure-it-out form input::-webkit-input-placeholder,
+#figure-it-out form input::-moz-placeholder,
+#figure-it-out form input:-ms-input-placeholder,
+#figure-it-out form input:-moz-placeholder {
+	color: #2a2f31;
+}
+
+#figure-it-out form button,
+#figure-it-out form input[type='checkbox'] {
+	cursor: pointer;
+}
+
+#figure-it-out form #fio-submit {
+	background-color: #2aa4b9;
+	border: 0;
+	color: #ffffff;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	padding: 0;
+}
+
+#figure-it-out form #fio-submit::after {
+	position: absolute;
+	content: '\35';
+	font-family: ETmodules !important;
+	font-size: 1.4em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#figure-it-out #fio-message {
+	background-color: #ffffff;
+	color: #2a2f31;
+	text-align: center;
+}
+
+#figure-it-out form fieldset {
+	display: flex;
+	flex-flow: column nowrap;
+	gap: 1em;
+}
+
+#figure-it-out form fieldset:not(:last-of-type) {
+	padding-bottom: 1em;
+}
+
+#figure-it-out form fieldset.gdpr {
+	flex-direction: row;
+}
+
+#figure-it-out input#gdpr_consent:focus-within {
+	outline: 1px solid;
+}
+
+#figure-it-out #loading {
+	text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+	#figure-it-out form fieldset.name {
+		flex-direction: row;
+	}
+
+	#figure-it-out form fieldset.name input {
+		flex: auto;
+	}
+}
