@@ -27,5 +27,5 @@ Create a popup form that collects user information and saves it to the database 
 
 ## Sample:
 
-https://sullivan.nursingcecentral.com/
-https://sullivan.nursingcecentral.com/#ncc-more-info (scroll to relevant section)
+- [https://sullivan.nursingcecentral.com/](https://sullivan.nursingcecentral.com/)
+- [Sample (scrolled to relevant section)](https://sullivan.nursingcecentral.com/#ncc-more-info)
